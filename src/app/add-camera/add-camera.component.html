@@ -1,0 +1,36 @@
+<h3>Create Camera</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="saveCamera()">
+    <div class="form-group">
+      <label for="id"> Camera ID</label>
+      <input type="text" class="form-control" id="id" required [(ngModel)]="camera.stringId" [name]="CameraId">
+    </div>
+
+    <div class="form-group">
+      <label for="name">Camera Name</label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="camera.name" [name]="CameraName">
+    </div>
+
+    <div class="form-group">
+      <label for="model">Camera Model</label>
+      <input type="text" class="form-control" id="model" required [(ngModel)]="camera.model" [name]="CameraModel">
+    </div>
+
+    <div class="form-group">
+      <label for="resolution">Camera Resolution</label>
+      <input type="text" class="form-control" id="resolution" required [(ngModel)]="camera.resolution" [name]="CameraResolution">
+    </div>
+
+    <div class="form-group">
+      <label for="ip">Camera Ip</label>
+      <input type="text" class="form-control" id="ip" required [(ngModel)]="camera.ip" [name]="CameraIp">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+</div>
