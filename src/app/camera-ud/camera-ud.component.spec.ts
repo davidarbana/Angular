@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CameraListComponent } from './camera-list.component';
+import { CameraUdComponent } from './camera-ud.component';
 
 describe('StudentListComponent', () => {
-  let component: CameraListComponent;
-  let fixture: ComponentFixture<CameraListComponent>;
+  let component: CameraUdComponent;
+  let fixture: ComponentFixture<CameraUdComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CameraListComponent ]
+      declarations: [ CameraUdComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CameraListComponent);
+    fixture = TestBed.createComponent(CameraUdComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

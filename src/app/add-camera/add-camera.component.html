@@ -1,6 +1,7 @@
 <h3>Create Camera</h3>
 <div [hidden]="submitted" style="width: 400px;">
   <form (ngSubmit)="saveCamera()">
+
     <div class="form-group">
       <label for="id"> Camera ID</label>
       <input type="text" class="form-control" id="id" required [(ngModel)]="camera.stringId" [name]="CameraId">

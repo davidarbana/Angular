@@ -7,10 +7,10 @@ import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-camera-list',
-  templateUrl: './camera-list.component.html',
-  styleUrls: ['./camera-list.component.css']
+  templateUrl: './camera-ud.component.html',
+  styleUrls: ['./camera-ud.component.css']
 })
-export class CameraListComponent implements OnInit {
+export class CameraUdComponent implements OnInit {
 
 
  constructor(private cameraService: CameraService) { }
@@ -31,16 +31,13 @@ export class CameraListComponent implements OnInit {
     return this.cameraUpdateForm.get('cameraIp');
   }
 
-  cameraArray: any[] = [];
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
-  private dtElement: any;
 
 
   cameras: Camera[];
   camera: Camera = new Camera();
   deleteMessage = false;
-  cameraList: any;
   isUpdated = false;
 
   cameraUpdateForm = new FormGroup({
@@ -81,7 +78,8 @@ export class CameraListComponent implements OnInit {
   }
 
   updateCam() {
-    this.cameraService.updateCamera(this.camera.stringId, this.camera).subscribe(
+    this.cameraService.updateCamera(this.camera.stringId, this.camera)
+      .subscribe(
       res => {
         console.log(res);
         this.ngOnInit();
@@ -90,6 +88,6 @@ export class CameraListComponent implements OnInit {
   }
 
   changeIsUpdated() {
-    this.isUpdated = true;
+    this.isUpdated = false;
   }
 }

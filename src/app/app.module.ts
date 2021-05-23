@@ -5,13 +5,13 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import {DataTablesModule} from 'angular-datatables';
-import { CameraListComponent } from './camera-list/camera-list.component';
+import { CameraUdComponent } from './camera-ud/camera-ud.component';
 import { AddCameraComponent } from './add-camera/add-camera.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CameraListComponent,
+    CameraUdComponent,
     AddCameraComponent,
   ],
   imports: [
