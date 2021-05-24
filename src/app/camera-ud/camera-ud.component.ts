@@ -77,8 +77,8 @@ export class CameraUdComponent implements OnInit {
     this.cameraService.getCamera(stringId);
   }
 
-  updateCam() {
-    this.cameraService.updateCamera(this.camera.stringId, this.camera)
+  updateCam(stringId: string, camera: Camera) {
+    this.cameraService.updateCamera(stringId, camera)
       .subscribe(
       res => {
         console.log(res);

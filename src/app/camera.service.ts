@@ -30,7 +30,7 @@ export class CameraService {
     return this.http.delete(`${this.baseUrl}${id}`);
   }
 
-  public updateCamera(stringId: string, value: any) {
+  public updateCamera(stringId: string, value: Camera) {
     return this.http.put(`http://localhost:8080/cameras/${stringId}`, value);
   }
 
